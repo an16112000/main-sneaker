@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className='App'>
         <Routes>
-          <Route path='/' element={<Home />} errorElement={<ErrorPage />} />
+          <Route path='/' element={<Home />} />
           <Route path='/product/:sneakerId/:sneakerSize' element={<DetailSneaker />} errorElement={<ErrorPage />} />
           <Route path='/:typeOfProduct/page/:pageNumber' element={<MenuSneakers />} errorElement={<ErrorPage />} />
         </Routes>

@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Header";
+import { Link } from "react-router-dom";
 // import styles from '../Header.module.scss'
 
 
@@ -7,14 +8,12 @@ const Home = () => {
     
     return (
         <>
-            <Header
-                // handleChoose={handleChoose}
-                // code={code}
-                // onChangeValue={onChangeValue}
-                // onChangeSize={onChangeSize}
-                // size={size}
-                // handleClick={handleClick}
-            />
+            <Header />
+            <button>
+                <Link to={'/jordan/page/1'}>
+                    Click Here
+                </Link>
+            </button>
         </>
     )
 }
