@@ -1,8 +1,8 @@
-import MenuSneakers from './LayOut/menuSneaker/MenuSneakers';
-import DetailSneaker from './LayOut/detailSneaker/DetailSneaker';
+// import MenuSneakers from './LayOut/menuSneaker/MenuSneakers';
+// import DetailSneaker from './LayOut/detailSneaker/DetailSneaker';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './LayOut/home/Home';
-import ErrorPage from './LayOut/errorPage/ErrorPage';
+// import ErrorPage from './LayOut/errorPage/ErrorPage';
 
 
 function App() {
