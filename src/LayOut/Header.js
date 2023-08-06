@@ -1,5 +1,4 @@
-import PropTypes from 'prop-types'
-import React from "react";
+import React, {useState} from "react";
 import styles from './Header.module.scss'
 import { Link } from "react-router-dom";
 
@@ -26,8 +25,33 @@ export const dataType = [
     }
 ]
 
-const Header = ({ code, onChangeValue, onChangeSize, size, handleClick , onResetPageNumber}) => {
-    console.log(onResetPageNumber, onChangeSize)
+const Header = () => {
+    const [code, setCode] = useState('')
+    const [size, setSize] = useState('size');
+
+
+    const handleClick = () => {
+        setCode('')
+        // setSize('')
+        window.scrollTo({
+            top: 0,
+            behavior: `smooth`
+        })
+    }
+
+    // function handleChoose(e) {
+    //     const value = e.target.innerHTML
+    //     setModal(true)
+    //     setSubmitCode('')
+    //     setType(value)
+    // }
+
+    function onChangeValue(e) {
+        setCode(e.target.value)
+    }
+    function onChangeSize(e) {
+        setSize(e.target.value)
+    }
     return (
         <div className={styles.header}>
             <div className={styles.type}>
@@ -37,7 +61,6 @@ const Header = ({ code, onChangeValue, onChangeSize, size, handleClick , onReset
                             return <Link
                             key={item.id}
                             to={`/${item.type}/page/1`}
-                            onClick={onResetPageNumber}
                             // onClick={(e) => handleChoose(e)}
                                 className={styles.itemHeader}
                             >
@@ -64,7 +87,7 @@ const Header = ({ code, onChangeValue, onChangeSize, size, handleClick , onReset
                 <Link
                     className={styles.btn}
                     onClick={handleClick}
-                    to={`/product/${code}`}
+                    to={`/product/${code}/${size}`}
                 >
                     Submit
                 </Link>
@@ -77,13 +100,5 @@ const Header = ({ code, onChangeValue, onChangeSize, size, handleClick , onReset
     )
 }
 
-Header.propTypes = {
-    code: PropTypes.string,
-    onChangeValue: PropTypes.func,
-    onChangeSize: PropTypes.func,
-    size: PropTypes.string,
-    handleClick: PropTypes.func,
-    onResetPageNumber: PropTypes.func
-}
 
 export default Header;

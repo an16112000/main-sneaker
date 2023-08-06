@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { instance } from '../services'
 import { getPriceAndSize } from "./getPriceAndSize";
 

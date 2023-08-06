@@ -1,7 +1,7 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react'
-import { instance } from '../services'
-import { getInformationKor } from './getInformationKor'
+// import axios from 'axios'
+// import { useEffect, useState } from 'react'
+// import { instance } from '../services'
+// import { getInformationKor } from './getInformationKor'
 
 function GetDataFromSoldOut({submitCode}) {
     // const [data, setData] = useState([])

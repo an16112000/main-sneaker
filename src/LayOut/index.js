@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import styles from './LayOut.module.scss'
-import GetDataFromSNKRDUNK from "../getDataFromSNKRDUNK";
-import GetDataFromSoldOut from "../getDataFromSoldOut/getDataFromSoldOut";
-import { getData } from "../getDataFromSNKRDUNK/getDataJp";
 import { mergeData } from "../mergeData";
 import LayOutSalesHistoryKream from "../getDataFromKream/LayOutSalesHistoryKream";
 import LayOutSalesHistorySoldOut from "../getDataFromSoldOut/LayOutSalesHistorySoldOut";
 import LayOutSalesHistorySNKRDUNK from "../getDataFromSNKRDUNK/LayOutSalesHistorySNKRDUNK";
 
 function Layout({ submitCode, size }) {
+    console.log(size)
     const [data, setData] = useState([]);
     useEffect(
         () => {
@@ -27,7 +25,7 @@ function Layout({ submitCode, size }) {
 
             <div className={styles.wrapper}>
                 <div className={styles.image}>
-                    {!data.code || <img src={data.img} />}
+                    {!data.code || <img src={data.img} alt={data.code} />}
                 </div>
                 <div className={styles.infor}>
                     <h3 className={styles.name}>{data.name}</h3>
