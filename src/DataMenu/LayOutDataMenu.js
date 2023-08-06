@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const LayOutDataMenu = ({ type, handleClick, pageNumber, typeOfProduct, handlePreviousPage }) => {
     const [data, setData] = useState([])
     const [page, setPage] = useState(1)
-    let temp = 1
     useEffect(
         () => {
             const fetchApi = async () => {
@@ -14,7 +13,7 @@ const LayOutDataMenu = ({ type, handleClick, pageNumber, typeOfProduct, handlePr
                 setData(response)
             }
             fetchApi();
-        }, [type, page]
+        }, [type, page, pageNumber]
     )
     useEffect(
         ()=> setPage(prev => prev + 1), [pageNumber]
