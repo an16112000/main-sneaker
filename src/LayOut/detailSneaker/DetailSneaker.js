@@ -11,7 +11,6 @@ const DetailSneaker = () => {
     if(sneakerSize === 'size') {
         sneakerSize = ''
     }
-    console.log(sneakerId)
     return (
         <>
             <Header />

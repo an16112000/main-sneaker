@@ -30,7 +30,6 @@ const LayOutDataMenu = ({ type, handleClick, pageNumber, typeOfProduct, handlePr
         })
     }
     
-    console.log(page, pageNumber)
     return (
         <div className={styles.menu}>
             {

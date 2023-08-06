@@ -6,7 +6,6 @@ import LayOutSalesHistorySoldOut from "../getDataFromSoldOut/LayOutSalesHistoryS
 import LayOutSalesHistorySNKRDUNK from "../getDataFromSNKRDUNK/LayOutSalesHistorySNKRDUNK";
 
 function Layout({ submitCode, size }) {
-    console.log(size)
     const [data, setData] = useState([]);
     useEffect(
         () => {

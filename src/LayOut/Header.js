@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import styles from './Header.module.scss'
 import { Link } from "react-router-dom";
 
@@ -27,24 +27,34 @@ export const dataType = [
 
 const Header = () => {
     const [code, setCode] = useState('')
-    const [size, setSize] = useState('size');
+    const [size, setSize] = useState('');
+    const [submitSize, setSubmitSize] = useState('size')
 
 
     const handleClick = () => {
         setCode('')
-        // setSize('')
+        setSize('')
+        setSubmitSize('size')
         window.scrollTo({
             top: 0,
             behavior: `smooth`
         })
     }
 
-    // function handleChoose(e) {
-    //     const value = e.target.innerHTML
-    //     setModal(true)
-    //     setSubmitCode('')
-    //     setType(value)
-    // }
+    useEffect(
+        () => {
+            setTimeout(
+                () => {
+                    if (size !== '') {
+                        setSubmitSize(size)
+                    }
+                    else {
+                        setSubmitSize('size')
+                    }
+                }, 500
+            )
+        }, [size]
+    )
 
     function onChangeValue(e) {
         setCode(e.target.value)
@@ -59,9 +69,9 @@ const Header = () => {
                     dataType.map(
                         item => {
                             return <Link
-                            key={item.id}
-                            to={`/${item.type}/page/1`}
-                            // onClick={(e) => handleChoose(e)}
+                                key={item.id}
+                                to={`/${item.type}/page/1`}
+                                // onClick={(e) => handleChoose(e)}
                                 className={styles.itemHeader}
                             >
                                 {item.title}
@@ -87,7 +97,7 @@ const Header = () => {
                 <Link
                     className={styles.btn}
                     onClick={handleClick}
-                    to={`/product/${code}/${size}`}
+                    to={`/product/${code}/${submitSize}`}
                 >
                     Submit
                 </Link>
