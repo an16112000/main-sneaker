@@ -11,8 +11,8 @@ function App() {
       <div className='App'>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/product/:sneakerId/:sneakerSize' element={<DetailSneaker />} errorElement={<ErrorPage />} />
-          <Route path='/:typeOfProduct/page/:pageNumber' element={<MenuSneakers />} errorElement={<ErrorPage />} />
+          {/* <Route path='/product/:sneakerId/:sneakerSize' element={<DetailSneaker />} errorElement={<ErrorPage />} /> */}
+          {/* <Route path='/:typeOfProduct/page/:pageNumber' element={<MenuSneakers />} errorElement={<ErrorPage />} /> */}
         </Routes>
 
       </div>

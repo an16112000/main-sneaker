@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/sneaker/static/css/main.f68be3de.css",
-    "main.js": "/sneaker/static/js/main.bb802378.js",
-    "static/js/787.35d850c3.chunk.js": "/sneaker/static/js/787.35d850c3.chunk.js",
-    "index.html": "/sneaker/index.html",
-    "main.f68be3de.css.map": "/sneaker/static/css/main.f68be3de.css.map",
-    "main.bb802378.js.map": "/sneaker/static/js/main.bb802378.js.map",
-    "787.35d850c3.chunk.js.map": "/sneaker/static/js/787.35d850c3.chunk.js.map"
+    "main.css": "/static/css/main.f68be3de.css",
+    "main.js": "/static/js/main.4a2a6600.js",
+    "static/js/787.35d850c3.chunk.js": "/static/js/787.35d850c3.chunk.js",
+    "index.html": "/index.html",
+    "main.f68be3de.css.map": "/static/css/main.f68be3de.css.map",
+    "main.4a2a6600.js.map": "/static/js/main.4a2a6600.js.map",
+    "787.35d850c3.chunk.js.map": "/static/js/787.35d850c3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f68be3de.css",
-    "static/js/main.bb802378.js"
+    "static/js/main.4a2a6600.js"
   ]
 }
