@@ -37,7 +37,7 @@ export const getDataMenu = async (type, page) => {
             let isSnkrDunkOk = false
             let isHistorySnkrDunkOk = false
             // let isHistoryKreamOk = false
-            let isPriceKreamOk = false
+            // let isPriceKreamOk = false
             let isKreamOk = false
             const responseJP = await instance.get(`https://snkrdunk.com/v1/products/${arrKor[i].code}/sales-history?`)
             const responseKream = await instanceKream.get(`https://kream.co.kr/api/p/tabs/all/?keyword=${arrKor[i].code}&request_key=59f3e93d-13b1-4df1-9690-558260cb6bc3`)
