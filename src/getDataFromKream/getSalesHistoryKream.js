@@ -1,6 +1,6 @@
 import { VND } from "../changeCurrency/changeCurrency"
 import { getRateKor } from "../rate"
-import { instanceKream, instanceKreamWithToken } from "../services"
+import { instanceKreamWithToken } from "../services"
 import { getIdProductKream } from "./getIdProductKream"
 
 

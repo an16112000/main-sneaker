@@ -36,8 +36,8 @@ const LayOutDataMenu = ({ type, handleClick, pageNumber, typeOfProduct, handlePr
             {
                 data.map(
                     (item, index) => {
-                        return <Link to={`/product/${item.code}`} key={index} className={styles.item} onClick={() => handleClick(item)}>
-                            <img src={item.img} />
+                        return <Link to={`/product/${item.code}/size`} key={index} className={styles.item} onClick={() => handleClick(item)}>
+                            <img src={item.img} alt={item.code} />
                             <p>{item.type}</p>
                             <h4>{item.name}</h4>
                             <span>Min Price Sold Out: {item.min_priceSoldOut}</span>

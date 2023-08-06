@@ -14,7 +14,7 @@ const LayOutSalesHistoryKream = ({ submitCode, size }) => {
         }, [submitCode, size]
     )
     let Component = <LayOutTable title={'Kream'} data1={'size'} data2={'price'} data3={'date'} array={data} />
-    if(data == []) {
+    if(data === []) {
         Component = <></>
     }
     return (

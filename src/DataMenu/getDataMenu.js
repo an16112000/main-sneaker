@@ -1,7 +1,6 @@
 import { VND } from "../changeCurrency/changeCurrency";
 import { getRateJp, getRateKor } from "../rate"
 import { instance, instanceKream } from "../services"
-import { getIdProductKream } from "../getDataFromKream/getIdProductKream";
 import {getSalesHistorySNKRDUNK} from '../getDataFromSNKRDUNK/getSalesHistorySNKRDUNK'
 
 export const getDataMenu = async (type, page) => {
@@ -11,7 +10,7 @@ export const getDataMenu = async (type, page) => {
     const data = response.data.data.product_info.list.map(
         (item) => {
             for (let i = 0; i < item.model_no.length; i++) {
-                if (item.model_no[i] == ' ' || item.model_no[i] == '/') {
+                if (item.model_no[i] === ' ' || item.model_no[i] === '/') {
                     item.model_no = item.model_no.slice(0, -item.model_no.length + i)
                 }
             }
@@ -37,7 +36,7 @@ export const getDataMenu = async (type, page) => {
             let isPriceSnkrDunkOk = false
             let isSnkrDunkOk = false
             let isHistorySnkrDunkOk = false
-            let isHistoryKreamOk = false
+            // let isHistoryKreamOk = false
             let isPriceKreamOk = false
             let isKreamOk = false
             const responseJP = await instance.get(`https://snkrdunk.com/v1/products/${arrKor[i].code}/sales-history?`)
@@ -52,7 +51,7 @@ export const getDataMenu = async (type, page) => {
             if(min_priceJp-min_priceKream>=1000000) {
                 isPriceSnkrDunkOk = true
             } else if(min_priceKream-min_priceJp>=1000000) {
-                isPriceKreamOk = true
+                // isPriceKreamOk = true
             }
 
             if(isHistorySnkrDunkOk && isPriceSnkrDunkOk) {

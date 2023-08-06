@@ -9,10 +9,10 @@ import { useParams } from "react-router-dom";
 const MenuSneakers = () => {
     let {typeOfProduct, pageNumber} = useParams()
     const [code, setCode] = useState('')
-    const [submitCode, setSubmitCode] = useState('');
+    // const [submitCode, setSubmitCode] = useState('');
     const [size, setSize] = useState('');
-    const [submitSize, setSubmitSize] = useState('');
-    const [modal, setModal] = useState(false);
+    // const [submitSize, setSubmitSize] = useState('');
+    // const [modal, setModal] = useState(false);
     const [type, setType] = useState(typeOfProduct);
     console.log('MenuSneaker')
     useEffect(
@@ -25,9 +25,9 @@ const MenuSneakers = () => {
 
 
     const handleClick = () => {
-        setSubmitCode(code)
-        setSubmitSize(size)
-        setModal(false)
+        // setSubmitCode(code)
+        // setSubmitSize(size)
+        // setModal(false)
         setCode('')
         setSize('')
         window.scrollTo({
@@ -64,7 +64,7 @@ const MenuSneakers = () => {
                 typeOfProduct={typeOfProduct} 
                 pageNumber={pageNumber} 
                 handleClick={(e) => {
-                    setSubmitCode(e.code)
+                    // setSubmitCode(e.code)
                 }} 
                 />
             </div>
